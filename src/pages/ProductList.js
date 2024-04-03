@@ -26,6 +26,14 @@ const products = [
     "rating": 4.9,
     "discount": 70,
     "availability": "no"
+  },
+  {
+    "id": 4,
+    "productName": "Laptop 4",
+    "price": 3799,
+    "rating": 3.9,
+    "discount": 70,
+    "availability": "no"
   }
 ];
 
@@ -51,26 +59,27 @@ const ProductList = () => {
   }, []);
 
   return (
-    <div className="product-list p-4">
-      <h1 className="bg-red text-white text-center py-2">Product List</h1>
-      <div className="my-4">
+    <div className="bg-gray-100 p-4 h-screen flex flex-col justify-evenly items-center">
+      <h1 className="text-3xl text-center text-gray-800 font-bold mb-8">Product List</h1>
+      <div className="flex justify-center mb-8">
         <Dropdown
           options={options}
           onChange={handleDropdownChange}
           value={selectedOption}
           placeholder="Select an option"
+          className="w-64"
         />
       </div>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
         {products.map((product) => (
-          <div key={product.id} className="product-card border border-gray-300 rounded p-4">
+          <div key={product.id} className="bg-white border border-gray-200 rounded-lg shadow-md p-4">
             <img src={product.image} alt={product.productName} className="w-full mb-4" />
-            <div className="product-info">
+            <div className="text-gray-800">
               <h3 className="text-lg font-semibold mb-2">{product.productName}</h3>
-              <p className="text-gray-600">Price: ${product.price}</p>
-              <p className="text-gray-600">Rating: {product.rating}</p>
-              <p className="text-gray-600">Discount: {product.discount}%</p>
-              <p className="text-gray-600">Availability: {product.availability}</p>
+              <p className="text-sm text-gray-600">Price: ${product.price}</p>
+              <p className="text-sm text-gray-600">Rating: {product.rating}</p>
+              <p className="text-sm text-gray-600">Discount: {product.discount}%</p>
+              <p className="text-sm text-gray-600">Availability: {product.availability}</p>
             </div>
           </div>
         ))}
