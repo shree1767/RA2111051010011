@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { useParams ,useNavigate} from "react-router-dom";
 import products from "./sampleproducts";
+import { IoMdArrowBack } from "react-icons/io";
 
 const ProductPage = () => {
   const { id } = useParams();
   const [product, setProduct] = useState(null);
-
+  const navigate = useNavigate();
   useEffect(() => {
     const productId = parseInt(id);
     const foundProduct = products.find((product) => product.id === productId);
@@ -19,9 +20,13 @@ const ProductPage = () => {
       </div>
     );
   }
-
+  const goBack = () => {
+    navigate(-1);
+  };
   return (
-    <div className="bg-gray-100 p-4 h-screen flex flex-col justify-center items-center sm:flex-row sm:justify-around sm:items-center px-10">
+    <div className="bg-white p-4 h-screen">
+    <button onClick={goBack}><IoMdArrowBack size={30}/></button>
+    <div className=" h-[55vh] flex flex-col justify-center items-center sm:flex-row sm:justify-around sm:items-center px-10">
     <div className="bg-white w-full sm:w-1/3 p-4 flex justify-center items-center sm:items-start sm:justify-start">
       <img
         src={product.image}
@@ -43,7 +48,7 @@ const ProductPage = () => {
       </div>
     </div>
   </div>
-  
+  </div>
   );
 };
 

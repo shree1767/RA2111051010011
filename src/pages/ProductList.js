@@ -5,20 +5,28 @@ import { Link } from "react-router-dom";
 import products from "./sampleproducts";
 
 const options = [
-  "Category",
-  "E-commerce Company",
   "Customer Rating",
   "Price: High to Low",
   "Price: Low to High",
-  "Availability",
+  "Discount",
 ];
 
 const ProductList = () => {
   const [selectedOption, setSelectedOption] = useState(null);
+  const [searchQuery, setSearchQuery] = useState("");
 
   const handleDropdownChange = (option) => {
     setSelectedOption(option.value);
+    // Implement sorting logic based on the selected option
   };
+
+  const handleSearchChange = (event) => {
+    setSearchQuery(event.target.value);
+  };
+
+  const filteredProducts = products.filter((product) =>
+    product.productName.toLowerCase().includes(searchQuery.toLowerCase())
+  );
 
   return (
     <div className="bg-white p-4 h-full flex flex-col justify-center items-around px-[10vw] py-[5vw]">
@@ -26,19 +34,26 @@ const ProductList = () => {
         <div className="md:text-3xl text-2xl text-left text-gray-800 font-bold mb-8">
           Product Results
         </div>
-        <div className="flex justify-end items-center gap-2 mb-8">
+        <div className="md:flex justify-end items-center gap-2 md:space-y-0 space-y-5 mb-8">
+          <input
+            type="text"
+            placeholder="Search products..."
+            value={searchQuery}
+            onChange={handleSearchChange}
+            className="md:w-1/2 w-full p-2 border border-gray-300 focus:outline-none focus:border-blue-500 transition"
+          />
           <Dropdown
             options={options}
             onChange={handleDropdownChange}
             value={selectedOption}
             placeholder="Sort By"
-            className="w-50"
+            className="md:w-[13vw] text-sm"
           />
         </div>
       </div>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-        {products.map((product) => (
+        {filteredProducts.map((product) => (
           <Link key={product.id} to={`/product/${product.id}`}>
             <div
               key={product.id}
