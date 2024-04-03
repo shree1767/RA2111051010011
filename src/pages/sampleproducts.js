@@ -27,7 +27,7 @@ const products = [
     discount: 70,
     availability: "no",
     image:
-      "data:https://dlcdnwebimgs.asus.com/gain/87C6B9D5-E3C1-4D9D-BBE9-AD19C16B22C2",
+      "https://dlcdnwebimgs.asus.com/gain/87C6B9D5-E3C1-4D9D-BBE9-AD19C16B22C2",
   },
   {
     id: 4,
