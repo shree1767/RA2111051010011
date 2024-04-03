@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Dropdown from 'react-dropdown';
 import 'react-dropdown/style.css';
-
+import { Link } from "react-router-dom";
 const products = [
   {
     "id": 1,
@@ -59,19 +59,21 @@ const ProductList = () => {
   }, []);
 
   return (
-    <div className="bg-gray-100 p-4 h-screen flex flex-col justify-evenly items-center">
+    <div className="bg-gray-100 p-4 h-screen flex flex-col justify-center items-around px-10">
       <h1 className="text-3xl text-center text-gray-800 font-bold mb-8">Product List</h1>
-      <div className="flex justify-center mb-8">
+      <div className="flex justify-end items-center gap-2 mb-8">
+        <div className="text-md">Filter</div>
         <Dropdown
           options={options}
           onChange={handleDropdownChange}
           value={selectedOption}
           placeholder="Select an option"
-          className="w-64"
+          className="w-50"
         />
       </div>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
         {products.map((product) => (
+          <Link key={product.id} to={`/product/${product.id}`}>
           <div key={product.id} className="bg-white border border-gray-200 rounded-lg shadow-md p-4">
             <img src={product.image} alt={product.productName} className="w-full mb-4" />
             <div className="text-gray-800">
@@ -82,6 +84,7 @@ const ProductList = () => {
               <p className="text-sm text-gray-600">Availability: {product.availability}</p>
             </div>
           </div>
+          </Link>
         ))}
       </div>
     </div>

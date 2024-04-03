@@ -1,13 +1,19 @@
-import './App.css';
-import ProductList from './pages/ProductList';
-import './index.css';
+// App.js
+import React from "react";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import ProductList from "./pages/ProductList";
+import ProductPage from "./pages/ProductPage";
 
 function App() {
   return (
-    <div className="App">
-      <ProductList/>
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" exact element={<ProductList/>} />
+        <Route path="/product/:id" component={<ProductPage/>} />
+      </Routes>
+    </Router>
   );
 }
 
 export default App;
+
