@@ -7,7 +7,7 @@ const ProductPage = () => {
 
   return (
     <div className="bg-gray-100 p-4 h-screen flex flex-col justify-center items-around px-10">
-      <h1 className="text-3xl text-center text-gray-800 font-bold mb-8">Product Details</h1>
+      <h1 className="md:text-3xl text-xl text-center text-gray-800 font-bold mb-8">Product Details</h1>
       <div className="bg-white border border-gray-200 rounded-lg shadow-md p-4">
         <img src={product.image} alt={product.productName} className="w-full mb-4" />
         <div className="text-gray-800">

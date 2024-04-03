@@ -28,8 +28,8 @@ const ProductList = () => {
 
   return (
     <div className="bg-gray-100 p-4 h-full flex flex-col justify-center items-around px-[10vw] py-[5vw]">
-      <div className="flex justify-between items-center" >
-      <div className="text-3xl text-left text-gray-800 font-bold mb-8">Product Results</div>
+      <div className="md:flex md:justify-between md:items-center" >
+      <div className="md:text-3xl text-2xl text-left text-gray-800 font-bold mb-8">Product Results</div>
       <div className="flex justify-end items-center gap-2 mb-8">
         <div className="text-md">Sort By</div>
         <Dropdown
