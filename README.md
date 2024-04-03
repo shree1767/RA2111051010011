@@ -13,7 +13,8 @@ This project is a simple website that displays products using a provided API. It
 
 
 ## Mobile View
-![Mobile View](path/to/mobile-view-image.png)
+<img width="359" alt="Screenshot 2024-04-03 at 8 00 50 PM" src="https://github.com/shree1767/RA2111051010011/assets/93395263/92e4d96f-b434-481c-ba66-3011108bc58f">
+
 
 ## Technologies Used
 
