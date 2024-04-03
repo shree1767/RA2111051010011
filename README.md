@@ -9,7 +9,7 @@ This project is a simple website that displays products using a provided API. It
 - **Product Details:** Clicking on a product displays detailed information about that product.
 
 ## Desktop View
-![Desktop View](file:///Users/shreenidhisashisekar/Desktop/website.png)
+<a href="https://ibb.co/9bkydqW"><img src="https://i.ibb.co/bsMNGrX/Screenshot-2024-04-03-at-7-48-26-PM.png" alt="Screenshot-2024-04-03-at-7-48-26-PM" border="0"></a>
 
 
 ## Mobile View
