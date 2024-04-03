@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState} from "react";
 import Dropdown from 'react-dropdown';
 import 'react-dropdown/style.css';
 import { Link } from "react-router-dom";
@@ -14,17 +14,11 @@ const options = [
 ];
 
 const ProductList = () => {
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
   const [selectedOption, setSelectedOption] = useState(null);
 
   const handleDropdownChange = (option) => {
     setSelectedOption(option.value);
   };
-
-  useEffect(() => {
-    // fetchData(setProducts, setError, setLoading);
-  }, []);
 
   return (
     <div className="bg-gray-100 p-4 h-full flex flex-col justify-center items-around px-[10vw] py-[5vw]">
