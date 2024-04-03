@@ -5,11 +5,10 @@ import products from "./sampleproducts";
 const ProductPage = () => {
   const { id } = useParams();
   const [product, setProduct] = useState(null);
-  console.log(id);
+
   useEffect(() => {
     const productId = parseInt(id);
     const foundProduct = products.find((product) => product.id === productId);
-
     setProduct(foundProduct);
   }, [id]);
 
