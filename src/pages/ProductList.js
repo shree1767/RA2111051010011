@@ -34,6 +34,22 @@ const products = [
     "rating": 3.9,
     "discount": 70,
     "availability": "no"
+  },
+  {
+    "id": 5,
+    "productName": "Laptop 5",
+    "price": 3799,
+    "rating": 3.9,
+    "discount": 70,
+    "availability": "no"
+  },
+  {
+    "id": 6,
+    "productName": "Laptop 6",
+    "price": 3799,
+    "rating": 3.9,
+    "discount": 70,
+    "availability": "no"
   }
 ];
 
@@ -59,7 +75,7 @@ const ProductList = () => {
   }, []);
 
   return (
-    <div className="bg-gray-100 p-4 h-screen flex flex-col justify-center items-around px-10">
+    <div className="bg-gray-100 p-4 h-screen flex flex-col justify-center items-around px-[10vw]">
       <h1 className="text-3xl text-center text-gray-800 font-bold mb-8">Product List</h1>
       <div className="flex justify-end items-center gap-2 mb-8">
         <div className="text-md">Filter</div>
@@ -78,9 +94,12 @@ const ProductList = () => {
             <img src={product.image} alt={product.productName} className="w-full mb-4" />
             <div className="text-gray-800">
               <h3 className="text-lg font-semibold mb-2">{product.productName}</h3>
-              <p className="text-sm text-gray-600">Price: ${product.price}</p>
               <p className="text-sm text-gray-600">Rating: {product.rating}</p>
-              <p className="text-sm text-gray-600">Discount: {product.discount}%</p>
+              <div className="flex justify-between ">
+                <p className="text-sm text-black font-bold "> {product.price} <span className="text-[10px]">M.R.P</span></p>
+                <p className="text-sm text-black"> ({product.discount}% off)</p>
+              </div>
+
               <p className="text-sm text-gray-600">Availability: {product.availability}</p>
             </div>
           </div>
