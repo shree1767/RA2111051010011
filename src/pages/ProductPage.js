@@ -34,8 +34,8 @@ const ProductPage = () => {
         {product.productName}
       </h1>
       <div className="flex flex-col gap-4 sm:flex-row sm:gap-0">
-        <p className="text-md text-black font-bold ">
-          {product.price} <span className="text-[10px]">M.R.P</span>
+        <p className="text-md text-black font-bold">
+        ₹{product.price} <span className="text-sm">MRP</span>
         </p>
         <p className="text-sm text-black font-bold">
           ({product.discount}% off)
