@@ -9,16 +9,17 @@ This project is a simple website that displays products using a provided API. It
 - **Product Details:** Clicking on a product displays detailed information about that product.
 
 ## Desktop View
-![Desktop View](path/to/desktop-view-image.png)
+![Desktop View](file:///Users/shreenidhisashisekar/Desktop/website.png)
+
 
 ## Mobile View
 ![Mobile View](path/to/mobile-view-image.png)
 
 ## Technologies Used
 
-- HTML, CSS, JavaScript for front-end development.
+- ReactJS for front-end development.
 - API Integration for fetching product data.
-- Bootstrap or any other framework for responsive design.
+- TailwindCSS framework for responsive design.
 
 ## Getting Started
 
@@ -29,9 +30,6 @@ To get started with the project, follow these steps:
 3. Ensure the API endpoint is correctly configured in the code.
 4. Open the website in a browser to view the products.
 
-## Contributors
-
-- [Your Name](link-to-your-profile) - Developer & Project Lead
 
 ## License
 
