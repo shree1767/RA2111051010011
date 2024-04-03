@@ -9,7 +9,7 @@ function App() {
     <Router>
       <Routes>
         <Route path="/" exact element={<ProductList/>} />
-        <Route path="/product/:id" component={<ProductPage/>} />
+        <Route path="/product" component={<ProductPage/>} />
       </Routes>
     </Router>
   );
