@@ -47,7 +47,7 @@ const ProductList = () => {
             onChange={handleDropdownChange}
             value={selectedOption}
             placeholder="Sort By"
-            className="md:w-[13vw] text-sm"
+            className="md:w-[18vw] xl:w-[13vw] text-sm"
           />
         </div>
       </div>

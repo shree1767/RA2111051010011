@@ -24,7 +24,7 @@ const ProductPage = () => {
     navigate(-1);
   };
   return (
-    <div className="bg-white p-4 h-screen">
+    <div className="bg-white p-4 h-[90%]">
     <button onClick={goBack}><IoMdArrowBack size={30}/></button>
     <div className=" h-[55vh] flex flex-col justify-center items-center sm:flex-row sm:justify-around sm:items-center px-10">
     <div className="bg-white w-full sm:w-1/3 p-4 flex justify-center items-center sm:items-start sm:justify-start">
