@@ -27,10 +27,11 @@ const ProductList = () => {
   }, []);
 
   return (
-    <div className="bg-gray-100 p-4 h-full flex flex-col justify-center items-around px-[10vw]">
-      <h1 className="text-3xl text-center text-gray-800 font-bold mb-8">Product List</h1>
+    <div className="bg-gray-100 p-4 h-full flex flex-col justify-center items-around px-[10vw] py-[5vw]">
+      <div className="flex justify-between items-center" >
+      <div className="text-3xl text-left text-gray-800 font-bold mb-8">Product Results</div>
       <div className="flex justify-end items-center gap-2 mb-8">
-        <div className="text-md">Filter</div>
+        <div className="text-md">Sort By</div>
         <Dropdown
           options={options}
           onChange={handleDropdownChange}
@@ -39,6 +40,8 @@ const ProductList = () => {
           className="w-50"
         />
       </div>
+      </div>
+       
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
         {products.map((product) => (
           <Link key={product.id} to={`/product/${product.id}`}>
