@@ -1,5 +1,6 @@
 import './App.css';
 import ProductList from './pages/ProductList';
+import './index.css';
 
 function App() {
   return (
